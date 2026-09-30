@@ -1,11 +1,17 @@
 # 🛡️ Medical Insurance Cost Estimator
 
-An interactive actuarial machine learning web application that predicts personal annual medical insurance costs with **~90.1% accuracy ($R^2$)**, built with **Python**, **Scikit-Learn**, and **Streamlit**.
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://medical-insurance-cost-estimator.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue?logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.64+-FF4B4B?logo=streamlit)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.6+-F7931E?logo=scikit-learn)
 ![Model R²](https://img.shields.io/badge/Model%20R²-90.1%25-brightgreen)
+
+> 🚀 **Live Web App**: Try the interactive predictor directly in your browser:  
+> **👉 [https://medical-insurance-cost-estimator.streamlit.app/](https://medical-insurance-cost-estimator.streamlit.app/)**
+
+---
+
+An interactive actuarial machine learning web application that predicts personal annual medical insurance costs with **~90.1% accuracy ($R^2$)**, built with **Python**, **Scikit-Learn**, and **Streamlit**.
 
 ---
 
@@ -24,6 +30,14 @@ An interactive actuarial machine learning web application that predicts personal
 - **National Benchmark Comparison**: Compares estimates live against national and smoking cohort averages.
 - **"What-If" Money-Saving Simulator**: Computes potential annual savings if the user quits smoking or reaches a healthy BMI range.
 - **Interactive Lifetime Projection Curve**: Visualizes projected premiums from age 18 to 65 across different lifestyle risk tiers.
+
+---
+
+## 🌐 Live Access
+
+You can use the application immediately without installing anything locally:
+
+👉 **[Launch Medical Insurance Cost Estimator](https://medical-insurance-cost-estimator.streamlit.app/)**
 
 ---
 
@@ -50,7 +64,7 @@ cd Medical-Insurance-Cost-Estimator
 pip install -r requirements.txt
 ```
 
-### 3. Run the Application
+### 3. Run the Application Locally
 ```bash
 streamlit run app.py
 ```
@@ -71,25 +85,15 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 ├── train_and_save_model.py                        # Standalone script to train & export model
 ├── run_app.bat                                    # 1-Click Windows launcher
 ├── launch_app.py                                  # Python launcher
+├── .python-version                                # Pinned Python 3.11 environment
 ├── requirements.txt                               # Dependencies for deployment
-└── README.md                                      # Documentation
+└── README.md                                      # Documentation & Live Demo link
 ```
 
 ---
 
-## ☁️ Deployment Guide
+## ☁️ Deployment
 
-### Can I deploy on Vercel?
-**No, Vercel is not recommended for Streamlit apps.**
-- Vercel is built for **serverless architecture** (static sites, Next.js, and stateless APIs).
-- Streamlit requires a **persistent, stateful server connection with active WebSockets** to maintain session state and run interactive callbacks. Vercel automatically kills functions after execution and lacks the long-running WebSocket runtime Streamlit needs.
-
-### Recommended 1-Click Free Deployment Options:
-1. **Streamlit Community Cloud (Recommended - 100% Free)**:
-   - Visit [share.streamlit.io](https://share.streamlit.io)
-   - Sign in with GitHub
-   - Select this repository: `sameer-04062004/Medical-Insurance-Cost-Estimator`
-   - Set Main file path: `app.py`
-   - Click **Deploy**! (It deploys in under 1 minute with automatic live updates on every git push).
-2. **Render.com / Hugging Face Spaces**:
-   - Both support Python web services with persistent WebSockets.
+The application is deployed on **Streamlit Community Cloud** with continuous integration enabled on the `main` branch:
+- **Live URL**: [https://medical-insurance-cost-estimator.streamlit.app/](https://medical-insurance-cost-estimator.streamlit.app/)
+- **Hosting Environment**: Python 3.11 on Linux
